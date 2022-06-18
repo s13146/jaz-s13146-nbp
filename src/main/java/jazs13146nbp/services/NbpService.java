@@ -32,14 +32,14 @@ public class NbpService {
         for (Rate rat : rates) {
             amount += rat.getMid();
         }
-        saveData(new SaveData(currency,startData,endData));
+        saveData(new SaveData(currency, startData, endData));
         return amount / rates.size();
 
     }
 
     //Zapisywanie do bazy
-    public SaveData saveData (SaveData saveData) {
-     return nbpRepository.save(saveData);
+    public SaveData saveData(SaveData saveData) {
+        return nbpRepository.save(saveData);
     }
 
 }
