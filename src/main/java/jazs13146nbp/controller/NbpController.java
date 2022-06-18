@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import jazs13146nbp.model.SaveData;
 import jazs13146nbp.services.NbpService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,12 +36,6 @@ public class NbpController {
     }
 
 
-    // @ApiOperation(value = "Save currency, start and end date, currency exchange rates to data base")
-    // Zapytanie post zapisujace do bazy
-    // @PostMapping("/save")
-    // public ResponseEntity<SaveData> saveSaveData( @RequestBody SaveData saveData) {
-    // return ResponseEntity.ok(nbpService.saveData(saveData));
-    //  }
 
 
 }

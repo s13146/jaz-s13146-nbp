@@ -12,9 +12,11 @@ import java.util.List;
 @Service
 public class NbpService {
     private RestTemplate restTemplate;
+    private NbpRepository nbpRepository;
 
-    public NbpService(RestTemplate restTemplate) {
+    public NbpService(RestTemplate restTemplate, NbpRepository nbpRepository) {
         this.restTemplate = restTemplate;
+        this.nbpRepository = nbpRepository;
     }
 
 
@@ -30,13 +32,14 @@ public class NbpService {
         for (Rate rat : rates) {
             amount += rat.getMid();
         }
+        saveData(new SaveData(currency,startData,endData));
         return amount / rates.size();
+
     }
 
     //Zapisywanie do bazy
-    //public SaveData saveData (SaveData saveData) {
-    // NbpRepository.save(saveData)
-    // return saveData;
-    //}
+    public SaveData saveData (SaveData saveData) {
+     return nbpRepository.save(saveData);
+    }
 
 }
