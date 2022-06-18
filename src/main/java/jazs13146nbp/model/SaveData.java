@@ -20,4 +20,11 @@ public class SaveData {
     private String endDate;
     private Double currencyExchangeRates;
 
+    public SaveData(Long id, String currency, String startDate, String endDate, Double currencyExchangeRates) {
+        this.id = id;
+        this.currency = currency;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.currencyExchangeRates = currencyExchangeRates;
+    }
 }

@@ -2,6 +2,8 @@ package jazs13146nbp.services;
 
 import jazs13146nbp.model.Rate;
 import jazs13146nbp.model.Root;
+import jazs13146nbp.model.SaveData;
+import jazs13146nbp.repository.NbpRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -30,5 +32,11 @@ public class NbpService {
         }
         return amount / rates.size();
     }
+
+    //Zapisywanie do bazy
+    //public SaveData saveData (SaveData saveData) {
+    // NbpRepository.save(saveData)
+    // return saveData;
+    //}
 
 }
